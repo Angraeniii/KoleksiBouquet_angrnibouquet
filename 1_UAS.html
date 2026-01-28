@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koleksi Bouquet I angrni_bouquet</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    color:#7ed9eb;
+}
+
+/* Set all paragraph text to black */
+p{
+    color:#000;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#7ecbff;
+    padding:20px;
+    text-align:center;
+    color:#ffffff;
+}
+
+header h1{
+    font-size:32px;
+    font-weight:700;
+}
+
+header p{
+    margin-top:10px;
+    font-size:16px;
+}
+header{
+    background:#7ecbff;
+    padding:30px 20px;
+    text-align:center;
+    color:white;
+}
+
+header .logo{
+    width:150px;
+    margin-bottom:10px;
+}
+
+header h1{
+    font-size:32px;
+    font-weight:700;
+}
+
+header p{
+    margin-top:10px;
+    font-size:16px;
+}
+
+/* ===== NAV ===== */
+nav{
+    background:#4fb3ff;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:50px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4fb3ff;
+    font-size:28px;
+}
+
+/* ===== BERANDA ===== */
+.beranda p{
+    text-align:center;
+    line-height:1.8;
+    font-size:16px;
+     
+}
+
+/* ===== PRODUK ===== */
+.produk h3{
+    margin:40px 0 20px;
+    color:#4fb3ff;
+    font-size:22px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    overflow:hidden;
+    text-align:center;
+    transition:transform 0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+.product-card img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.product-card h3{
+    margin:10px 0 5px;
+    color:#4fb3ff;
+    font-size:18px;
+}
+
+.product-card p{
+    font-size:14px;
+    padding:0 10px;
+}
+
+.product-card span{
+    display:block;
+    margin:10px 0;
+    font-weight:600;
+}
+
+.product-card button{
+    margin-bottom:15px;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    background:#4fb3ff;
+    color:white;
+    cursor:pointer;
+}
+
+.product-card button:hover{
+    background:#3399e6;
+}
+
+/* ===== FORM ===== */
+form{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+form label{
+    display:block;
+    margin-top:15px;
+    font-weight:500;
+}
+
+form input, form textarea, form select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+form button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4fb3ff;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+form button:hover{
+    background:#3399e6;
+}
+
+.ulasan {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.ulasan h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sub-ulasan {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.ulasan-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.ulasan-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.ulasan-card:hover {
+    transform: translateY(-5px);
+}
+
+.komentar {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.ulasan-card h4 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.ulasan-card span {
+    color: #f4b400;
+    font-size: 18px;
+}
+.foto-pelanggan {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #f4b400;
+}
+
+.ulasan-card {
+    text-align: center;
+}
+
+/* ===== KONTAK ===== */
+.kontak{
+    text-align:center;
+}
+
+footer{
+    background:#7ecbff;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+.kontak {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.qr-instagram {
+    margin-top: 25px;
+}
+
+.qr-instagram img {
+    width: 150px;
+    height: 170px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.qr-instagram img:hover {
+    transform: scale(1.05);
+}
+
+.qr-instagram p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.hero{
+    height: 100vh;
+    background-image: url("background.jpeg"); /* ganti sesuai nama file gambarmu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
+}
+
+/* Overlay gelap biar teks jelas */
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(73, 171, 199, 0.4);
+}
+
+/* Konten di atas overlay */
+.hero-content{
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-content h1{
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-content p{
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.hero-content{
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.font1{
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <img src="LogoTokoBouquetAngrni.png" alt="angrni bouquet" class="logo">
+
+        <h1>angrni_bouquet</h1>
+        <p class="font1">Buket Spesial untuk Setiap Momen Bahagia Anda</p>
+    </div>
+</section>s
+
+
+<nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#produk">Produk</a>
+    <a href="#pesan">Pemesanan</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+<!-- ===== BERANDA ===== -->
+<section id="beranda" class="beranda">
+    <h2>Beranda</h2>
+    <p>
+        Selamat datang di Toko angrni_bouquet, tempat terbaik untuk menemukan berbagai
+        macam bouquet unik, kreatif, dan penuh makna. Kami hadir untuk membantu Anda
+        mengungkapkan perasaan bahagia, cinta, dan apresiasi melalui rangkaian bouquet
+        yang dibuat dengan penuh ketelitian dan sentuhan seni.
+        <br><br>
+        Toko kami menyediakan berbagai pilihan bouquet seperti bouquet snack,
+        bouquet uang, bouquet boneka, bouquet bunga satin, hingga bouquet custom sesuai
+        permintaan pelanggan. Setiap bouquet dirancang dengan konsep menarik dan
+        dapat disesuaikan untuk ulang tahun, wisuda, anniversary, pernikahan,
+        dan berbagai momen spesial lainnya.
+    </p>
+</section>
+
+<!-- ===== TENTANG ===== -->
+<section id="tentang">
+    <h2>Tentang Toko Bouquet</h2>
+    <p style="text-align:center; line-height:1.8;">
+        Toko angrni_bouquet adalah usaha kreatif yang bergerak di bidang pembuatan
+        dan penjualan bouquet modern. Kami mengutamakan kualitas bahan, kerapian
+        desain, serta kepuasan pelanggan. Selain menyediakan berbagai jenis bouquet
+        siap pesan, kami juga melayani bouquet custom sesuai keinginan dan budget Anda.
+    </p>
+</section>
+
+<!-- ===== PRODUK ===== -->
+<section id="produk" class="produk">
+    <h2>Produk Kami</h2>
+
+    <h3>Bouquet Snack</h3>
+    <div class="product-grid">
+
+        <div class="product-card">
+          <img src="Snack1.jpeg">
+          <h3>Bouquet Snack Chocolatos Dilan</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack2.jpeg">
+          <h3>Bouquet Snack Oreo BLACKPINK (Hitam)</h3>
+          <p>Rp. 100.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack3.jpeg">
+          <h3>Bouquet Snack beng-beng</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack4.jpeg">
+          <h3>Bouquet Snack Oreo BLACKPINK (Pink)</h3>
+          <p>Rp. 100.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack5.jpeg">
+          <h3>Bouquet Snack TOP</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack6.jpeg">
+          <h3>Bouquet Snack Hello Panda</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack7.jpeg">
+          <h3>Bouquet Snack Max</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack8.jpeg">
+          <h3>Bouquet Snack Pocky</h3>
+          <p>Rp. 100.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack9.jpeg">
+          <h3>Bouquet Snack Max</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Snack10.jpeg">
+          <h3>Bouquet Snack Diary Milk</h3>
+          <p>Rp. 150.000</p>
+          <button>+</button>
+        </div>
+    </div>
+
+    <h3>Bouquet Uang</h3>
+    <div class="product-grid">
+
+        <div class="product-card">
+          <img src="Uang1.jpeg">
+          <h3>Bouquet Uang (Hanya Kerangka Saja)</h3>
+          <p>Rp. 350.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang2.jpeg">
+          <h3>Bouquet Uang 50.000</h3>
+          <p>Rp. 550.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang3.jpeg">
+          <h3>Bouquet Uang 5.000</h3>
+          <p>Rp. 150.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang4.jpeg">
+          <h3>Bouquet Uang 10.000</h3>
+          <p>Rp. 150.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang5.jpeg">
+          <h3>Bouquet Uang 50.000</h3>
+          <p>Rp. 550.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang6.jpeg">
+          <h3>Bouquet Uang 2.000</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang7.jpeg">
+          <h3>Bouquet Uang (Hanya Kerangka Saja)</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang8.jpeg">
+          <h3>Bouquet Uang 20.000</h3>
+          <p>Rp. 150.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang9.jpeg">
+          <h3>Bouquet Uang 5.000</h3>
+          <p>Rp. 85.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Uang10.jpeg">
+          <h3>Bouquet Uang 50.000</h3>
+          <p>Rp. 1.050.000</p>
+          <button>+</button>
+        </div>
+    </div>
+
+   <h3>Bouquet Boneka</h3>
+    <div class="product-grid">
+
+        <div class="product-card">
+          <img src="Boneka1.jpeg">
+          <h3>Bouquet Boneka 1</h3>
+          <p>Rp. 35.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka2.jpeg">
+          <h3>Bouquet Boneka 2</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka3.jpeg">
+          <h3>Bouquet Boneka 3</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka4.jpeg">
+          <h3>Bouquet Boneka 4</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka5.jpeg">
+          <h3>Bouquet Boneka 5</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka6.jpeg">
+          <h3>Bouquet Boneka 6</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka7.jpeg">
+          <h3>Bouquet Boneka 7</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka8.jpeg">
+          <h3>Bouquet Boneka 8</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka9.jpeg">
+          <h3>Bouquet Boneka 9</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Boneka10.jpeg">
+          <h3>Bouquet Boneka 10</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+    </div>
+
+    <h3>Bouquet Bunga Satin</h3>
+    <div class="product-grid">
+
+        <div class="product-card">
+          <img src="Satin1.jpeg">
+          <h3>Bouquet Bunga Satin Pink</h3>
+          <p>Rp. 35.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin2.jpeg">
+          <h3>Bouquet Bunga Satin Pink</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin3.jpeg">
+          <h3>Bouquet Bunga Satin Ungu</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin4.jpeg">
+          <h3>Bouquet Bunga Satin Pink</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin5.jpeg">
+          <h3>Bouquet Bunga Satin Pink Gembul</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin6.jpeg">
+          <h3>Bouquet Bunga Satin Pink + Kupu Kupu</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin7.jpeg">
+          <h3>Bouquet Bunga Satin Merah</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin8.jpeg">
+          <h3>Bouquet Bunga Satin Hitam</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin9.jpeg">
+          <h3>Bouquet Bunga Satin Ungu</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+        <div class="product-card">
+          <img src="Satin10.jpeg">
+          <h3>Bouquet Bunga Satin Merah</h3>
+          <p>Rp. 50.000</p>
+          <button>+</button>
+        </div>
+    </div>
+
+    <h3>Bouquet Custom</h3>
+    <div class="product-grid">
+
+        <div class="product-card">
+          <img src="C1.jpeg">
+          <h3>Bouquet Custom Sepatu</h3>
+          <p>Rp. 100.000</p>
+        </div>
+        <div class="product-card">
+          <img src="C2.jpeg">
+          <h3>Bouquet Custom Skripsi</h3>
+          <p>Rp. 200.000</p>
+        </div>
+        <div class="product-card">
+          <img src="C3.jpeg">
+          <h3>Bouquet Custom Bunga Request</h3>
+          <p>Rp. 125.000</p>
+        </div>
+        <div class="product-card">
+          <img src="C4.jpeg">
+          <h3>Bouquet Custom Bunga Lily Full</h3>
+          <p>Rp. 100.000</p>
+        </div>
+        <div class="product-card">
+          <img src="C5.jpeg">
+          <h3>Bouquet Custom Premium Flower</h3>
+          <p>Rp. 150.000</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ULASAN PELANGGAN ===== -->
+<section id="ulasan" class="ulasan">
+    <h2>Ulasan Pelanggan</h2>
+    <p class="sub-ulasan">Apa kata pelanggan setelah membeli produk kami</p>
+
+    <div class="ulasan-container">
+
+        <div class="ulasan-card">
+            <img src="bouquet1.png" alt="Foto Pelanggan" class="foto-pelanggan">
+            <p class="komentar">
+                "Buketan nya bagus banget, rapi, dan sesuai request. Pengiriman cepat dan aman. Recommended!"
+            </p>
+            <h4>Fadli</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="ulasan-card">
+            <img src="bouquet2.png" alt="Foto Pelanggan" class="foto-pelanggan">
+            <p class="komentar">
+                "Buket snack nya lengkap dan fresh. Cocok buat kado ulang tahun, pasti order lagi!"
+            </p>
+            <h4>Rizka Nurul 'Aini</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="ulasan-card">
+            <img src="bouquet3.png" alt="Foto Pelanggan" class="foto-pelanggan">
+            <p class="komentar">
+                "Pelayanan ramah, bisa custom desain sesuai keinginan. Hasilnya sangat memuaskan."
+            </p>
+            <h4>Andri Wijaya</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="ulasan-card">
+            <img src="bouquet4.png" alt="Foto Pelanggan" class="foto-pelanggan">
+            <p class="komentar">
+                "Hasil buket sangat elegan dan premium. Cocok untuk wisuda dan acara spesial."
+            </p>
+            <h4>Yusuf Mulana</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+        <div class="ulasan-card">
+            <img src="bouquet5.png" alt="Foto Pelanggan" class="foto-pelanggan">
+            <p class="komentar">
+                "Admin fast response, pengiriman tepat waktu, dan hasil buket melebihi ekspektasi."
+            </p>
+            <h4>Hafiz Hakim</h4>
+            <span>⭐⭐⭐⭐⭐</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== PEMESANAN ===== -->
+<section id="pesan">
+    <h2>Form Pemesanan</h2>
+
+    <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc43mKmUHCV-9qScSIAwuVkFlQDoy0cjZXUMdLawuGpcpdtZA/viewform?usp=header"
+        width="100%"
+        height="800"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0">
+        Memuat…
+    </iframe>
+</section>
+
+<!-- ===== KONTAK ===== -->
+<section id="kontak" class="kontak">
+    <h2>Kontak Kami</h2>
+    <p>
+        📍 Alamat: Jl. Pabean Link. Kubang Lampit <br>
+        Kelurahan Tegal Bunder Kecamatan Purwakarta Kota Cilegon Banten <br>
+        📞 WhatsApp: 0838-0684-9645 <br>
+        📧 Email: dewiputrianggraeni@gmail.com
+    </p>
+
+    <!-- QR Code Instagram -->
+    <div class="qr-instagram">
+        <p>📸 Scan QR Code Instagram Kami</p>
+        <a href="https://www.instagram.com/USERNAME_INSTAGRAM" target="_blank">
+            <img src="qr_bouquet.jpeg" alt="QR Code Instagram" />
+        </a>
+        <p>@angrni_bouquet</p>
+    </div>
+</section>
+
+<footer>
+    ©angrni_bouquet | All Rights Reserved
+</footer>
+
+</body>
+</html>
